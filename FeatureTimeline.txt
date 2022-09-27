@@ -1,0 +1,14 @@
+PLANNED FEATURE LIST:
+- User registration / authentication - Need to deal with possible spam accounts.
+- Geolocation reporting
+- Potholes
+- Downed Power Lines
+- Fallen Trees
+- Other road / infrastructure 
+-
+-
+
+
+TIMELINE:
+Previous Week: We got the connection to the Mac setup and had our IP's whitelisted.
+This Week: Get basic application up and working, use XCode in order to load the application onto our phones. 
