@@ -9,5 +9,7 @@ target 'Infrastruct' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'GoogleMaps', '7.1.0'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'RealmSwift', '~>10'
 end

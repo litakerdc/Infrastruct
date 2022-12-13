@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951488C42919CE9500978BFF /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951488C32919CE9500978BFF /* Dog.swift */; };
+		951488C62919CF7700978BFF /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951488C52919CF7700978BFF /* ListView.swift */; };
+		953E906128ECC9670067AEE6 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E906028ECC9670067AEE6 /* LocationHelper.swift */; };
+		954D6100291AD5D300ED0F59 /* LocationReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D60FF291AD5D300ED0F59 /* LocationReport.swift */; };
+		954D6102291AD90800ED0F59 /* NewDbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D6101291AD90800ED0F59 /* NewDbView.swift */; };
 		95568B4C28E11B7400E49E60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95568B4B28E11B7400E49E60 /* GoogleService-Info.plist */; };
+		956006042919CC60005F0F41 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956006032919CC60005F0F41 /* DataManager.swift */; };
+		95A3110D2910AC760013D33D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3110C2910AC760013D33D /* ContentView.swift */; };
 		95F1C9BA28D91E2400613B19 /* InfrastructApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F1C9B928D91E2400613B19 /* InfrastructApp.swift */; };
 		95F1C9BC28D91E2400613B19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F1C9BB28D91E2400613B19 /* ContentView.swift */; };
 		95F1C9BE28D91E2500613B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F1C9BD28D91E2500613B19 /* Assets.xcassets */; };
@@ -19,7 +26,14 @@
 		39F6680CD7132C819C11983C /* Pods_Infrastruct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Infrastruct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF80F7DBACD3CCF5FB2DC04 /* Pods-Infrastruct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infrastruct.debug.xcconfig"; path = "Target Support Files/Pods-Infrastruct/Pods-Infrastruct.debug.xcconfig"; sourceTree = "<group>"; };
 		8B09997A15D2A7C9F6AAD5A4 /* Pods-Infrastruct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infrastruct.release.xcconfig"; path = "Target Support Files/Pods-Infrastruct/Pods-Infrastruct.release.xcconfig"; sourceTree = "<group>"; };
+		951488C32919CE9500978BFF /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		951488C52919CF7700978BFF /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		953E906028ECC9670067AEE6 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		954D60FF291AD5D300ED0F59 /* LocationReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationReport.swift; sourceTree = "<group>"; };
+		954D6101291AD90800ED0F59 /* NewDbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDbView.swift; sourceTree = "<group>"; };
 		95568B4B28E11B7400E49E60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		956006032919CC60005F0F41 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		95A3110C2910AC760013D33D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95F1C9B628D91E2400613B19 /* Infrastruct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Infrastruct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F1C9B928D91E2400613B19 /* InfrastructApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructApp.swift; sourceTree = "<group>"; };
 		95F1C9BB28D91E2400613B19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,9 +84,16 @@
 			isa = PBXGroup;
 			children = (
 				95568B4B28E11B7400E49E60 /* GoogleService-Info.plist */,
+				954D6101291AD90800ED0F59 /* NewDbView.swift */,
 				95F1C9B928D91E2400613B19 /* InfrastructApp.swift */,
 				95F1C9BB28D91E2400613B19 /* ContentView.swift */,
+				95A3110C2910AC760013D33D /* ContentView.swift */,
+				953E906028ECC9670067AEE6 /* LocationHelper.swift */,
+				956006032919CC60005F0F41 /* DataManager.swift */,
+				951488C32919CE9500978BFF /* Dog.swift */,
 				95F1C9BD28D91E2500613B19 /* Assets.xcassets */,
+				951488C52919CF7700978BFF /* ListView.swift */,
+				954D60FF291AD5D300ED0F59 /* LocationReport.swift */,
 				95F1C9BF28D91E2500613B19 /* Preview Content */,
 			);
 			path = Infrastruct;
@@ -106,7 +127,6 @@
 				95F1C9B328D91E2400613B19 /* Frameworks */,
 				95F1C9B428D91E2400613B19 /* Resources */,
 				2A13E9795B5F4F19573850EA /* [CP] Embed Pods Frameworks */,
-				DD9BB5B05A9ECC59712E5052 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,23 +201,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Infrastruct/Pods-Infrastruct-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD9BB5B05A9ECC59712E5052 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Infrastruct/Pods-Infrastruct-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Infrastruct/Pods-Infrastruct-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Infrastruct/Pods-Infrastruct-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ED24BD7CB57B95F5436E410C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,8 +230,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953E906128ECC9670067AEE6 /* LocationHelper.swift in Sources */,
+				95A3110D2910AC760013D33D /* ContentView.swift in Sources */,
+				956006042919CC60005F0F41 /* DataManager.swift in Sources */,
 				95F1C9BC28D91E2400613B19 /* ContentView.swift in Sources */,
+				954D6100291AD5D300ED0F59 /* LocationReport.swift in Sources */,
+				954D6102291AD90800ED0F59 /* NewDbView.swift in Sources */,
+				951488C42919CE9500978BFF /* Dog.swift in Sources */,
 				95F1C9BA28D91E2400613B19 /* InfrastructApp.swift in Sources */,
+				951488C62919CF7700978BFF /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
