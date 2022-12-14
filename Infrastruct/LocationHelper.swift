@@ -10,8 +10,10 @@ import CoreLocation
 class LocationHelper: NSObject, ObservableObject {
 
     static let shared = LocationHelper()
+    //2D coordinate var
     static let DefaultLocation = CLLocationCoordinate2D(latitude: 45.8827419, longitude: -1.1932383)
 
+    //CLLocationCoordinate2D Object
     static var currentLocation: CLLocationCoordinate2D {
         guard let location = shared.locationManager.location else {
             return DefaultLocation

@@ -2,6 +2,7 @@
 //  LocationReport.swift
 //  Infrastruct
 //
+//  This class serves as the design of a LocationReport object. When our database is queried, it will turn each entry into a LocationReport object.
 //  Created by devadmin on 11/8/22.
 //
 

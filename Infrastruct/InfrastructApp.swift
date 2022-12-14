@@ -2,15 +2,14 @@
 //  InfrastructApp.swift
 //  Infrastruct
 //
+//  This serves as our "configuration page", it is where our App is first launched from and passes our enviormentObjects to our views.
+//
 //  Created by devadmin on 9/19/22.
 //
 
 import RealmSwift
 import SwiftUI
 import Firebase
-//import RealmSwift
-
-//let app = ReamSwift.App(id: "rchat-jihmd")
 
 @main
 struct InfrastructApp: SwiftUI.App {
@@ -20,14 +19,9 @@ struct InfrastructApp: SwiftUI.App {
     
     var body: some Scene {
         WindowGroup {
-            /**
-            ListView()
-                .environmentObject(dataManager)
-             **/
-            //IF WANT TO SEE DB PROOF OF CONCEPT, COMMENT NEXT 3 LINES OUT AND UNCOMMENT TOP TWO LINES.
             let viewModel = AppViewModel()
             
-            
+            //Show our app, and pass references to our Authentication viewModel and our Database dataManager enviormentObjects.
             ContentView()
                 .environmentObject(viewModel)
                 .environmentObject(dataManager)

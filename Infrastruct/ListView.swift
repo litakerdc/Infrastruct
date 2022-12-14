@@ -2,6 +2,7 @@
 //  ListView.swift
 //  Infrastruct
 //
+//  This class serves as the "User Information Panel", it is ListView that displays all the reports from the user, it calls fetchReports(). 
 //  Created by devadmin on 11/7/22.
 //
 
@@ -9,7 +10,6 @@ import SwiftUI
 
 struct UserInfoView: View {
     @EnvironmentObject var dataManager: DataManager
-    @State private var showPopup = false
     var body: some View {
         NavigationView {
             List(dataManager.reports) { x in
@@ -21,9 +21,6 @@ struct UserInfoView: View {
             }, label: {
                 Image(systemName: "plus")
             }))
-            .sheet(isPresented: $showPopup) {
-                NewDbView()
-            }
         }
     }
 }

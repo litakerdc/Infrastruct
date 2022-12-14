@@ -2,6 +2,8 @@
 //  ContentView.swift
 //  Infrastruct
 //
+//  This class is our main file, it serves as the basis for most of Views, and is where the core of our GUI is displayed. 
+//
 //  Created by devadmin on 9/19/22.
 //
 
@@ -13,9 +15,6 @@ import RealmSwift
 import Firebase
 
 
-
-//ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate
-
 class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @EnvironmentObject var dataManager: DataManager
@@ -25,19 +24,21 @@ class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var currUser: String = "Default User"
     @Published var showingAlert = false
     
-    
+    //MKCoordinateRegion initializer
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40, longitude: 120), span: MKCoordinateSpan(latitudeDelta: 100, longitudeDelta: 100))
     
     @State private var showingSheet = false
     
-    //@StateObject var mapData = ContentViewModel()
+    //create locationmanager object
     let locationManager = CLLocationManager()
     
+    //On init load set location manager
     override init() {
         super.init()
         locationManager.delegate = self
     }
     
+    //Request permissions from user on init load, needed to obtain the user's current location
     func requestAllowOnceLocationPermission() {
         locationManager.requestLocation()
     }
@@ -50,10 +51,12 @@ class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    //Output if error
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
     
+    //Getter for center location
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude = mapView.centerCoordinate.latitude
         let longitude = mapView.centerCoordinate.longitude
@@ -61,7 +64,7 @@ class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-    
+    //Map view type toggle with mapView and mapType variables
     @Published var mapView = MKMapView()
     @Published var mapType : MKMapType = .standard
     
@@ -77,11 +80,12 @@ class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     let auth = Auth.auth()
     
 
-    
+    // Signed in bool init
     var isSignedIn: Bool {
         return auth.currentUser != nil
     }
     
+    //Sign in function using email and password to authenticate
     func signIn(email: String, password: String) {
         auth.signIn(withEmail: email, password: password)
             { [weak self] result, error in guard result != nil, error == nil else {
@@ -98,6 +102,7 @@ class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    //Sign up function using email and password to create account for authentication
     func signUp(email: String, password: String) {
         auth.createUser(withEmail: email, password: password)
             { [weak self]result, error in guard result != nil, error == nil else {
@@ -113,7 +118,7 @@ class AppViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
         }
     
-    
+    //Sign out function to log out of system
     func signOut() {
         try? auth.signOut()
         
@@ -138,15 +143,18 @@ struct MyAnnotationItem: Identifiable {
     let id = UUID()
 }
 
+//Map view struct that holds map data and creates live map view with current location and address
 struct MyMapView: View {
     //@StateObject var mapData = ContentViewModel()
     @EnvironmentObject var dataManager: DataManager
     @Environment(\.dismiss) var dismiss
     
+    //geoCoder object used for converting location object to readable string address
     let geoCoder = CLGeocoder()
     
     weak var addressLabel: UILabel!
     
+    //Function to add a report to the database, utilized the dataManager class.
     func passReport(rtype: String)
     {
         // get the current date and time
@@ -169,14 +177,18 @@ struct MyMapView: View {
     
     @State var locationString = ""
     
+    //On load initialize location string
     init() {
         locationString = "Test"
     }
     
+    //Helper function to load string once CLGeocoder completes on new thread
     func addressHelper(loc: String) {
         locationString = loc
     }
     
+    //Getter for address from a latitude and longitude
+    //Uses placemarks to determine address parts,
     func getAddress(lat: Double, long: Double) -> Void {
         let loc = CLLocation(latitude: lat, longitude: long)
         var cAddr = "a"
@@ -219,7 +231,6 @@ struct MyMapView: View {
                     let country = pm.country
                     cAddr += country!
                 }
-                //cAddr = subt! + " " + t! + ", " + locality! + " " + adminArea! + ", " + zip! + ", " + country!
             } else {
                 cAddr = "Test2"
             }
@@ -228,12 +239,11 @@ struct MyMapView: View {
         })
     }
         
-        //@EnvironmentObject var viewModel: AppViewModel
     @StateObject var viewModel = AppViewModel()
     @State private var region: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: LocationHelper.currentLocation.latitude, longitude: LocationHelper.currentLocation.longitude),
         span: MKCoordinateSpan(latitudeDelta: MapDefaults.zoom, longitudeDelta: MapDefaults.zoom))
-    
+
     let annotationItems = [MyAnnotationItem(
                             coordinate: CLLocationCoordinate2D(
                                 latitude: MapDefaults.latitude,
@@ -248,17 +258,21 @@ struct MyMapView: View {
                                 latitude: 45.915737,
                                 longitude: -1.3300991),
                             color: .blue)]
+    //Default map view fields, when the map is first opened, this is the default location to show.
     private enum MapDefaults {
         static let latitude = 36.2168
         static let longitude = 81.6746
         static let zoom = 1.0
     }
     
+    //New location helper object
     @ObservedObject var locHelper = LocationHelper()
     
+    //Buttons and features on VStack for screen location
     var body: some View {
         VStack {
             
+            //Address string above map created from getAddress
             Text(locationString)
             .font(.subheadline)
             .padding()
@@ -266,6 +280,8 @@ struct MyMapView: View {
                             interactionModes: .all,
                             showsUserLocation: true
             )}
+        
+            //Our LocationButton gets the user's current location and converts it to a latitude and longitude.
             LocationButton(.currentLocation) {
                 viewModel.requestAllowOnceLocationPermission()
                 let lat = LocationHelper.currentLocation.latitude
@@ -279,18 +295,7 @@ struct MyMapView: View {
             
 
             
-	    /*Button(action: viewModel.updateMapType, label: {
-	        Image(systemName: viewModel.mapType ==
-		    .standard ? "network" : "map")
-		    .font(.title2)
-		    .padding(10)
-		    .background(Color.primary)
-		    .clipShape(Circle())
-	    })
-
-	    .frame(maxWidth: .infinity, alignment: .trailing)
-	    .padding()*/
-            
+            //Menu for reporting issues
             Menu("Report an issue")
             {
                 Button("Pothole", action: { passReport(rtype: "Pothole") })
@@ -299,23 +304,18 @@ struct MyMapView: View {
                 Button("Other", action: { passReport(rtype: "Other") })
                 
             }
-            /**
-            LocationButton(.sendCurrentLocation) {
-                return
-            }
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .labelStyle(.titleOnly)
-             **/
         }
     }
-
+//This is our View of the "landing page", it is the page where our Map Sheet is called from.
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
+    
+    //These vars determine which sheet is showing, they act as triggers for the sheets.
     @State private var showingSheet = false
     @State private var showingUserSheet = false;
 
+    //Sign in view and navigation
     var body: some View {
         NavigationView {
             if viewModel.signedIn && !viewModel.mapShowing {
@@ -350,12 +350,12 @@ struct ContentView: View {
                 }, label: {
                     Text("Sign Out")
                         .frame(width: 200, height: 50)
-                        //.background(Color.green)
                         .foregroundColor(Color.red)
                 })
                 }
                 
             }
+            //If we are signed in, and the map is supposed to be showing, show the map, otherwise have the user sign in.
             else if viewModel.signedIn && viewModel.mapShowing
             {
                 MyMapView()
@@ -371,11 +371,16 @@ struct ContentView: View {
     }
 }
 
+//Struct for the sign in page, this is the very first page a user will see and it is how they log in. 
 struct SignInView: View {
+    
+    //These are the fields to be used when the user signs in, an email and a a password.
     @State var email = ""
     @State var password = ""
     
     @EnvironmentObject var viewModel: AppViewModel
+    
+    //This view is where out input fields are.
     var body: some View {
             VStack {
                 Image("logo")
@@ -422,6 +427,7 @@ struct SignInView: View {
     }
 }
 
+//The view for the SignUp page, this is the page that is displayed when users want to sign up.
 struct SignUpView: View {
     @State var email = ""
     @State var password = ""
@@ -471,10 +477,10 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+//Unused test location manager replaced with LocationHelper class file
 final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40, longitude: 120), span: MKCoordinateSpan(latitudeDelta: 100, longitudeDelta: 100))
     
-    //@StateObject var mapData = ContentViewModel()
     let locationManager = CLLocationManager()
     
     override init() {
