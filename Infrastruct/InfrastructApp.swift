@@ -2,7 +2,7 @@
 //  InfrastructApp.swift
 //  Infrastruct
 //
-//  This serves as our "configuration page", it is where our App is first launched from and passes our enviormentObjects to our views.
+//  This serves as our "configuration page", it is where our App is first launched from and passes our enviormentObjects to our different views.
 //
 //  Created by devadmin on 9/19/22
 //
