@@ -4,7 +4,7 @@
 //
 //  This serves as our "configuration page", it is where our App is first launched from and passes our enviormentObjects to our views.
 //
-//  Created by devadmin on 9/19/22.
+//  Created by devadmin on 9/19/22
 //
 
 import RealmSwift
