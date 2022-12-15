@@ -39,7 +39,7 @@ If you're on macOS and looking to clone this project to XCode, then here is a st
 
 Step 1: Copy this repositories clone link:
 
-![Image](https://imgur.com/opRUEac)
+![Image](https://imgur.com/opRUEac.png)
 
 Step 2: Clone the repo into a new Xcode project
 
