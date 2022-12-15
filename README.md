@@ -66,7 +66,7 @@ Assuming the above step worked, you should see something like this:
 
 ![Image](https://imgur.com/61Lx7ut.png)
 
-Step 4: Open the project in Xcode, choose your desired simulator and click on "Run".
+Step 4: Open the project in Xcode, and click on the Play/Run button in the top left.
 
 NOTE: Building Infrastruct on a device for the first time will take a few minutes.
 
@@ -75,7 +75,7 @@ NOTE: Building Infrastruct on a device for the first time will take a few minute
 
 Once it is done building, a simulator will open containing Infrastruct.
 
-![Image](https://imgur.com/opRUEac.png)
+![Image](https://i.imgur.com/6Q4PkJW.png)
 
 Congrautlations! You've installed the Infrastruct XCode project onto your macOS!
 
