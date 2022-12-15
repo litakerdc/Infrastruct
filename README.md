@@ -25,7 +25,7 @@ local Infrastructure problems and local property damage. Infrastruct is currentl
 - User information page that reads from the Database.
 - Admin Panel that is able to query the Database and display reports from all users. 
 
-The Admin Panel is seperate from our app and can be found in its own repository [here](https://github.com/JGDIFF/InfrastructAdminPanel)
+Note: The Admin Panel is seperate from our app and can be found in its own repository [here](https://github.com/JGDIFF/InfrastructAdminPanel)
 
 
 
