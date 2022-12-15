@@ -5,10 +5,12 @@ PLANNED FEATURE LIST:
 - Downed Power Lines
 - Fallen Trees
 - Other road / infrastructure 
--
--
 
 
-TIMELINE:
-Previous Week: We got the connection to the Mac setup and had our IP's whitelisted.
-This Week: Get basic application up and working 
+Actual timeline:
+
+User Authentication -> Map View -> Endless database struggles -> Firestore Database -> Redesign layout with sheets -> Geolocation reporting + Reverse address lookup -> general app fixes -> Admin Panel / User report history. 
+
+We did not achomplish as much as we had hoped, but we feel like we did well considering every aspect of the project was brand new to us. We did end up implementing many core features of the app, and we plan to continue to improve it. 
+
+
