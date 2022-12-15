@@ -88,24 +88,34 @@ Infrastruct is lightweight and easy to use, here we will show a few example use 
 When you first open Infrastruct, you will be greeted with the Sign In page,
 if you already have an account, go ahead and log in, otherwise click on "Create Account" at the bottom.
 
-(Image)
+![Image](https://i.imgur.com/v2oW5cM.png)
 
 Once you're on the Create Account page, enter an email address and password that you can remember.
 There are currently no password restrictions, it can be as short or as long as you'd like. Then click Sign In.
 
-(Image)
+![Image](https://i.imgur.com/Z5Jkoap.png)
 
 You are automatically signed in upon creating a valid account. 
 
 Once you are signed in, you arrive at the Home page, from here you have two options.
 You may either open the Map page or the User Information page. 
 
+![Image](https://i.imgur.com/ROywI01.png)
+
 When you open the map page, the map will load the default view. Click the Location Button at the bottom of the screen
 in order to get your current location, a popup may appear asking for your permission.
+
+![Image](https://i.imgur.com/zfO4IP7.png)
 
 Now your current location will be displayed on the map, with a blue dot in the center that represents you. You can hit the location button again for a second time and
 notice that your currennt address will be displayed at the top of the Map as a String. 
 
 Once you are at your current Location, you can press on the Report Menu if you'd like to report a problem. There are several options for you to choose from, 
 for now Infrastruct only supports Potholes, Weather Damage, Street Obstructions and "Other" reports. Click on the type of report you'd like to make for it to be sent to the database
+
+![Image](https://i.imgur.com/gSuebYl.png)
+
+If you'd like to navigate back to the home page, you can slide the Map Sheet as if it were a popup. You can then navigate to the User Information Sheet to view previous user reports.
+
+![Image](https://i.imgur.com/PJ3uzY1.png)
 
