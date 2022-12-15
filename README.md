@@ -13,17 +13,6 @@ local Infrastructure problems and local property damage. Infrastruct is currentl
 - [Dylan Litaker](https://www.github.com/litakerdc)
 
 
-## Installation
-
-Infrastruct is unavaliable on any Windows Device.
-
-Once Infrastruct is approved on the App Store, you may install it on any iOS device by searching 
-"Infrastruct" on the App Store. 
-
-If you're on macOS and looking to clone this project to XCode, then here is quick guide.
-
-
-    
 ## Features
 
 - User sign in with fully functional Authentication.
@@ -38,5 +27,61 @@ If you're on macOS and looking to clone this project to XCode, then here is quic
 
 
 
-## Documentation / Manual
+## Installation
+
+Infrastruct is unavaliable on Microsoft Windows/Android devices.
+
+Once Infrastruct is approved on the App Store, you may install it on any iOS device by searching for
+"Infrastruct" on the App Store and installing it like any other Application. 
+
+If you're on macOS and looking to clone this project to XCode, then here is a step by step guide on how to do such.
+
+
+Step 1: Copy this repositories clone link:
+
+![Image](https://imgur.com/opRUEac)
+
+Step 2: Clone the repo into a new Xcode project
+
+![Image](https://imgur.com/dqUVbuh)
+
+![Image](https://imgur.com/x80hFtn)
+
+Step 3: Navigate into whatever directory you've created the project in via Terminal, and run:
+
+```pod install```
+
+![Image](https://imgur.com/DsS78J8)
+
+
+NOTE: If you get any Ruby errors while trying to run the above command, consult the following resources on how to fix it: 
+
+https://handstandsam.com/2021/06/11/how-to-install-a-specific-ruby-version-for-cocoapods/
+
+https://developer.apple.com/forums/thread/697220
+
+https://guides.cocoapods.org/using/getting-started.html
+
+Assuming the above step worked, you should see something like this:
+
+![Image](https://imgur.com/61Lx7ut)
+
+Step 4: Open the project in Xcode, choose your desired simulator and click on "Run".
+
+NOTE: Building Infrastruct on a device for the first time will take a few minutes.
+
+![Image](https://imgur.com/PeEvBwd)
+
+
+Once it is done building, a simulator will open containing Infrastruct.
+
+![Image](https://imgur.com/opRUEac)
+
+Congrautlations! You've installed the Infrastruct XCode project onto your macOS!
+
+
+    
+## Documentation
+
+[Documentation](https://linktodocumentation)
 
