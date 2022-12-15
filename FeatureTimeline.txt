@@ -11,4 +11,4 @@ PLANNED FEATURE LIST:
 
 TIMELINE:
 Previous Week: We got the connection to the Mac setup and had our IP's whitelisted.
-This Week: Get basic application up and working, use XCode in order to load the application onto our phones. 
+This Week: Get basic application up and working 
