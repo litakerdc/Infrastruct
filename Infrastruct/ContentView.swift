@@ -11,7 +11,6 @@ import CoreLocationUI
 import MapKit
 import SwiftUI
 import FirebaseAuth
-import RealmSwift
 import Firebase
 
 
