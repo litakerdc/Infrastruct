@@ -41,7 +41,7 @@ Step 1: Copy this repositories clone link:
 
 ![Image](https://imgur.com/opRUEac.png)
 
-Step 2: Clone the repo into a new Xcode project
+Step 2: Clone the repo into a new Xcode project:
 
 ![Image](https://imgur.com/dqUVbuh.png)
 
@@ -66,7 +66,7 @@ Assuming the above step worked, you should see something like this:
 
 ![Image](https://imgur.com/61Lx7ut.png)
 
-Step 4: Open the project in Xcode, and click on the Play/Run button in the top left.
+Step 4: Open the project in Xcode, and click on the Play/Run button in the top left:
 
 NOTE: Building Infrastruct on a device for the first time will take a few minutes.
 
