@@ -43,15 +43,15 @@ Step 1: Copy this repositories clone link:
 
 Step 2: Clone the repo into a new Xcode project
 
-![Image](https://imgur.com/dqUVbuh)
+![Image](https://imgur.com/dqUVbuh.png)
 
-![Image](https://imgur.com/x80hFtn)
+![Image](https://imgur.com/x80hFtn.png)
 
 Step 3: Navigate into whatever directory you've created the project in via Terminal, and run:
 
 ```pod install```
 
-![Image](https://imgur.com/DsS78J8)
+![Image](https://imgur.com/DsS78J8.png)
 
 
 NOTE: If you get any Ruby errors while trying to run the above command, consult the following resources on how to fix it: 
@@ -64,18 +64,18 @@ https://guides.cocoapods.org/using/getting-started.html
 
 Assuming the above step worked, you should see something like this:
 
-![Image](https://imgur.com/61Lx7ut)
+![Image](https://imgur.com/61Lx7ut.png)
 
 Step 4: Open the project in Xcode, choose your desired simulator and click on "Run".
 
 NOTE: Building Infrastruct on a device for the first time will take a few minutes.
 
-![Image](https://imgur.com/PeEvBwd)
+![Image](https://imgur.com/PeEvBwd.png)
 
 
 Once it is done building, a simulator will open containing Infrastruct.
 
-![Image](https://imgur.com/opRUEac)
+![Image](https://imgur.com/opRUEac.png)
 
 Congrautlations! You've installed the Infrastruct XCode project onto your macOS!
 
