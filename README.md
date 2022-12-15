@@ -23,7 +23,9 @@ local Infrastructure problems and local property damage. Infrastruct is currentl
 - Fully functional Firebase Firestore database.
 - Map view is able to write to the database with information obtained from the user.
 - User information page that reads from the Database.
-- Admin Panel that is able to query the Database and display reports from all users.
+- Admin Panel that is able to query the Database and display reports from all users. 
+
+The Admin Panel is seperate from our app and can be found in its own repository [here](https://github.com/JGDIFF/InfrastructAdminPanel)
 
 
 
