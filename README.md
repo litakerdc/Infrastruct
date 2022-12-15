@@ -51,7 +51,7 @@ Step 3: Navigate into whatever directory you've created the project in via Termi
 
 ```pod install```
 
-![Image](https://imgur.com/DsS78J8.png)
+![Image](https://i.imgur.com/qV9Ia6G.png)
 
 
 NOTE: If you get any Ruby errors while trying to run the above command, consult the following resources on how to fix it: 
